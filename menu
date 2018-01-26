@@ -201,7 +201,6 @@ elif test $x -eq 3; then
 	echo -e "  [o] รวมทั้งหมด : $total USER" | lolcat
 	echo -e "==============================[[ ]]=============================" | lolcat
 	echo -e ""
-	echo -e "==============================[[ ]]=============================" | lolcat
 
 	echo -e "================================================================" | lolcat
 	echo -e "  [>] HACKING-DDOS-PHISING-SPAM-TORENT                      " | lolcat
