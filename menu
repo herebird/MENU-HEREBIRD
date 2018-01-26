@@ -156,7 +156,7 @@ END
 	echo -e " [o] Script by 097-026-7262                     " | lolcat
 	echo -e "================================================" | lolcat
 	echo -e " [>] Config VPN:                                " | lolcat
-	echo -e " http://$MYIP/client.ovpn                       " | lolcat
+	echo -e " http://$IP:81/client.ovpn                      " | lolcat
 	echo -e "------------------------------------------------" | lolcat
 	echo -e ""
 	echo -e ""	
