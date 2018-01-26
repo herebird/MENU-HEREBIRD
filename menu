@@ -6,21 +6,21 @@ color3='\e[0m'
 
 	echo -e "--------- MENU SCRIPT ---------"
 	echo ""
-	echo -e "|${color1} 1${color3}| เพิ่มชื่อผู้ใช้"
-	echo -e "|${color1} 2${color3}| ลบชื่อผู้ใช้"
-	echo -e "|${color1} 3${color3}| รายชื่อผู้ใช้ทั้งหมด"
-	echo -e "|${color1} 4${color3}| เปลี่ยนรหัสผ่านผู้ใช้ใหม่"
-	echo -e "|${color1} 5${color3}| รายชื่อผู้ใช้ที่กำลังออนไลน์"
-	echo -e "|${color1} 6${color3}| แบนชื่อผู้ใช้"
-	echo -e "|${color1} 7${color3}| ปลดแบนชื่อผู้ใช้"
-	echo -e "|${color1} 8${color3}| ตั้งค่ารีบูทเซิฟเวอร์อัตโนมัติ"
-	echo -e "|${color1} 9${color3}| ตรวจสอบดาต้าที่ใช้ไปทั้งหมดในปัจจุบัน"
-	echo -e "|${color1}10${color3}| ทดสอบความเร็วอินเตอร์เน็ต"
-	echo -e "|${color1}11${color3}| รีสตาร์ทระบบ (สำหรับผู้ที่แก้ไขสคริปท์)"
-	echo -e "|${color1}12${color3}| ลิ้งค์ดาวน์โหลดคอนฟิกแบบใส่ชื่อผู้ใช้และรหัสผ่าน"
-	echo -e "|${color1}13${color3}| อัพเดตเมนู"
-	echo -e "|${color1}14${color3}| เก็บไฟล์สำรองข้อมูลผู้ใช้ หรือนำเข้าไฟล์สำรองข้อมูลผู้ใช้"
-	echo -e "|${color1}15${color3}| ยกเลิก"
+	echo -e "[o] |${color1} 1${color3}| เพิ่มชื่อผู้ใช้"
+	echo -e "[o] |${color1} 2${color3}| ลบชื่อผู้ใช้"
+	echo -e "[o] |${color1} 3${color3}| รายชื่อผู้ใช้ทั้งหมด"
+	echo -e "[o] |${color1} 4${color3}| เปลี่ยนรหัสผ่านผู้ใช้ใหม่"
+	echo -e "[o] |${color1} 5${color3}| รายชื่อผู้ใช้ที่กำลังออนไลน์"
+	echo -e "[o] |${color1} 6${color3}| แบนชื่อผู้ใช้"
+	echo -e "[o] |${color1} 7${color3}| ปลดแบนชื่อผู้ใช้"
+	echo -e "[o] |${color1} 8${color3}| ตั้งค่ารีบูทเซิฟเวอร์อัตโนมัติ"
+	echo -e "[o] |${color1} 9${color3}| ตรวจสอบดาต้าที่ใช้ไปทั้งหมดในปัจจุบัน"
+	echo -e "[o] |${color1}10${color3}| ทดสอบความเร็วอินเตอร์เน็ต"
+	echo -e "[o] |${color1}11${color3}| รีสตาร์ทระบบ (สำหรับผู้ที่แก้ไขสคริปท์)"
+	echo -e "[o] |${color1}12${color3}| ลิ้งค์ดาวน์โหลดคอนฟิกแบบใส่ชื่อผู้ใช้และรหัสผ่าน"
+	echo -e "[o] |${color1}13${color3}| อัพเดตเมนู"
+	echo -e "[o] |${color1}14${color3}| เก็บไฟล์สำรองข้อมูลผู้ใช้ หรือนำเข้าไฟล์สำรองข้อมูลผู้ใช้"
+	echo -e "[o] |${color1}15${color3}| ยกเลิก"
 	echo -e ""
 	read -p "กรุณาเลือกหัวข้อที่ต้องการใช้งาน (ตัวเลข)  : " x
 	
@@ -110,28 +110,29 @@ END
         fi
 	clear
 	cd
+  	echo -e ""
+	echo -e ""| lolcat
+	echo -e "|       New Account Information SSH       |" | boxes -d dog | lolcat
+	echo -e "============[[-SERVER-PREMIUM-]]===========" | lolcat
+	echo -e "     Host          : $IP                   " | lolcat
+	echo -e "     Username      : $Login                " | lolcat
+	echo -e "     Password      : $Passwd               " | lolcat
+	echo -e "     Port Dropbear : 443,80                " | lolcat
+	echo -e "     Port OpenSSH  : 22,143                " | lolcat
+	echo -e "     Port Squid    : 8080,3128             " | lolcat
+	echo -e "     Warning       : Max 2 login           " | lolcat
+	echo -e "-------------------------------------------" | lolcat
+	echo -e "     Exp.   : $exp                         " | lolcat
+	echo -e "===========================================" | lolcat
+	echo -e "   HACKING-DDOS-PHISING-SPAM-TORENT        " | lolcat
+	echo -e "   HEREBIRD & OCSPANEL.INFO                " | lolcat
+	echo -e "   Script by 097-026-7262                  " | lolcat
+	echo -e "===========================================" | lolcat
+	echo -e " "| lolcat
+	echo -e "   Config VPN:                             " | lolcat
+	echo -e "   http://$IP:81/$Login.ovpn        " | lolcat
+	echo -e "-------------------------------------------" | lolcat
 	echo -e ""
-	echo -e "======== Account ============"
-	echo -e "Download Config	: http://$IP:85/$Login.ovpn"
-	echo -e "Username	: $Login"
-	echo -e "Password	: $Passwd"
-	echo -e "Out of Date	: $exp"
-	echo -e ""
-	echo -e "ไฟล์เดียวสามารถใช้ได้ทั้งเครือข่าย Truemove และ Dtac"
-	echo -e "หมายเหตุ : สำหรับ Truemove ใช้ได้เฉพาะซิมแบบเติมเงินเท่านั้น"
-	echo -e "หมายเหตุ : สำหรับ Dtac ต้องสมัครโปรฯ Line ถึงจะสามารถใช้งาน VPN ได้"
-        echo -e ""
-        echo -e "นอกจากจะสามารถใช้งานผ่านแอพฯ OpenVPN Connect ได้แล้ว..."
-	echo -e "ยังสามารถใช้งานได้ทั้งแอพฯ HTTP Injector ,Ki4a ,eProxy ,KPN Tunnel"
-	echo -e "และแอพฯจำพวก HTTP อีกมากมาย..."
-	echo -e ""
-	echo -e "หากต้องการรูปแบบข้อมูลหรือเพโหลด... ให้พิมพ์คำสั่ง payload"
-	echo -e "IP         : $IP"
-	echo -e "Proxy      : $IP"
-	echo -e "Port Proxy : 8080"
-	echo -e ""
-	echo -e "หมายเหตุ : ขณะนี้ยังไม่สามารถใช้งานผ่านทางคอมพิวเตอร์ได้ กำลังทำการแก้ไข"
-	echo -e "============================="
 	echo -e ""
 
 elif test $x -eq 2; then
@@ -170,10 +171,19 @@ elif test $x -eq 3; then
 		fi
 	done < /etc/passwd
 	total="$(awk -F: '$3 >= '$UIDN' && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
-	echo "-------------------------------------"
-	echo "รวมทั้งหมด : $total USER"
-	echo "-------------------------------------"
-	echo ""
+	echo -e "=================[[]]================" | lolcat
+	echo -e "รวมทั้งหมด : $total USER" | lolcat
+	echo -e "=================[[]]================" | lolcat
+	echo -e ""
+	echo -e "=================[[]]================" | lolcat
+
+	echo -e "===========================================" | lolcat
+	echo -e "   Admin & Detail  :                       "| lolcat
+	echo -e "   HACKING-DDOS-PHISING-SPAM-TORENT        " | lolcat
+	echo -e "   HEREBIRD & OCSPANEL.INFO                "| lolcat
+	echo -e "   Script by 097-026-7262                  "| lolcat
+	echo -e "===========================================" | lolcat
+	echo -e " "| lolcat
 
 elif test $x -eq 4; then
         echo ""
