@@ -438,9 +438,9 @@ elif test $x -eq 11; then
 	if test $x -eq 1; then
         clear
         echo ""
-        echo "OCSPANEL.INFO : Please Wait" | lolcat
-        echo "และจะกลับมาใช้งานได้อีกครั้งภายใน 30 วินาที"
-        echo "nginx ,openvpn ,cron ,ssh ,dropbear ,squid3 ....Restarting"
+        echo " [>] OCSPANEL.INFO : Please Wait" | lolcat
+        echo " [!] และจะกลับมาใช้งานได้อีกครั้งภายใน 30 วินาที"
+        echo " [!] nginx ,openvpn ,cron ,ssh ,dropbear ,squid3 ....Restarting"
         echo ""
 	/etc/init.d/nginx restart
 	service openvpn restart
