@@ -14,7 +14,7 @@ fi
 color1='\e[031;1m'
 color2='\e[34;1m'
 color3='\e[0m'
-	  echo  "----------------------------------------------------------------" 
+	  echo  "----------------------------------------------------------------" | lolcat
 
 	cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
 	cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
@@ -30,7 +30,7 @@ color3='\e[0m'
 	echo -e " [o] \e[032;1mTotal amount of swap:\e[0m $swap MB"
 	echo -e " [o] \e[032;1mSystem uptime:\e[0m $up"
 	echo  "----------------------------------------------------------------" 
-	echo  ">>>>>>>>>>>>>>>>>>>> MENU SCRIPT 0970267262 <<<<<<<<<<<<<<<<<<<<" 
+	echo  ">>>>>>>>>>>>>>>>>>>> MENU SCRIPT 0970267262 <<<<<<<<<<<<<<<<<<<<" | lolcat
 	echo  "----------------------------------------------------------------" 
 	echo -e " [o] |${color1} 1${color3}| สร้างบัญชีผู้ใช้"
 	echo -e " [o] |${color1} 2${color3}| ลบบัญชีของผู้ใช้"
@@ -48,9 +48,9 @@ color3='\e[0m'
 	echo -e " [o] |${color1}14${color3}| เก็บไฟล์สำรองข้อมูลผู้ใช้ หรือนำเข้าไฟล์สำรองข้อมูลผู้ใช้"
 	echo -e " [o] |${color1}15${color3}| ยกเลิก"
 	echo -e ""
-	echo  "----------------------------------------------------------------" 
+	echo  "----------------------------------------------------------------" | lolcat
 	read -p " [>] โปรดใส่ตัวเลือกของเมนู (ตัวเลข): " x
-	echo  "----------------------------------------------------------------" 
+	echo  "----------------------------------------------------------------" | lolcat
 	
 if test $x -eq 1; then
 	echo ""
@@ -132,34 +132,34 @@ END
 	cp $Login.ovpn /home/vps/public_html/
 	cd
 	if [ ! -e /usr/local/bin/payload ]; then
-        wget -O /usr/local/bin/payload "https://raw.githubusercontent.com/nwqionnwkn/OPENEXTRA/master/Config/payload"
+        wget -O /usr/local/bin/payload "https://raw.githubusercontent.com/herebird/MENU-HEREBIRD/master/payload"
 	chmod +x /usr/local/bin/payload
         fi
 	clear
 	cd
-  echo -e ""
-echo -e ""| lolcat
-echo -e "|       New Account Information SSH      |" | boxes -d dog | lolcat
-echo -e "======================[[-SERVER-PREMIUM-]]======================" | lolcat
-echo -e "      [>] Host              : $IP                               " | lolcat
-echo -e "      [>] Username          : $Login                            " | lolcat
-echo -e "      [>] Password          : $Passwd                           " | lolcat
-echo -e "      [>] Port Dropbear     : 443,80                            " | lolcat
-echo -e "      [>] Port OpenSSH      : 22,143                            " | lolcat
-echo -e "      [>] Port Squid        : 8080,3128                         " | lolcat
-echo -e "      [>] Warning           : Max 2 login                       " | lolcat
-echo -e "----------------------------------------------------------------" | lolcat
-echo -e "      [>] สามารถใช้งานได้ถึง   : $exp                              " | lolcat
-echo -e "================================================================" | lolcat
-echo -e "      [>] HACKING-DDOS-PHISING-SPAM-TORENT                      " | lolcat
-echo -e "      [>] HEREBIRD & OCSPANEL.INFO                              " | lolcat
-echo -e "      [>] Script by 097-026-7262                                " | lolcat
-echo -e "================================================================" | lolcat
-echo -e "      [>] Config VPN:                                           " | lolcat
-echo -e "      http://$MYIP/client.ovpn                                  " | lolcat
-echo -e "----------------------------------------------------------------" | lolcat
-echo -e ""
-echo -e ""	
+  	echo -e ""
+	echo -e ""| lolcat
+	echo -e "|       New Account Information SSH      |" | boxes -d dog | lolcat
+	echo -e "======================[[-SERVER-PREMIUM-]]======================" | lolcat
+	echo -e "      [>] Host              : $IP                               " | lolcat
+	echo -e "      [>] Username          : $Login                            " | lolcat
+	echo -e "      [>] Password          : $Passwd                           " | lolcat
+	echo -e "      [>] Port Dropbear     : 443,80                            " | lolcat
+	echo -e "      [>] Port OpenSSH      : 22,143                            " | lolcat
+	echo -e "      [>] Port Squid        : 8080,3128                         " | lolcat
+	echo -e "      [>] Warning           : Max 2 login                       " | lolcat
+	echo -e "----------------------------------------------------------------" | lolcat
+	echo -e "      [>] สามารถใช้งานได้ถึง   : $exp                              " | lolcat
+	echo -e "================================================================" | lolcat
+	echo -e "      [>] HACKING-DDOS-PHISING-SPAM-TORENT                      " | lolcat
+	echo -e "      [>] HEREBIRD & OCSPANEL.INFO                              " | lolcat
+	echo -e "      [>] Script by 097-026-7262                                " | lolcat
+	echo -e "================================================================" | lolcat
+	echo -e "      [>] Config VPN:                                           " | lolcat
+	echo -e "      http://$MYIP/client.ovpn                                  " | lolcat
+	echo -e "----------------------------------------------------------------" | lolcat
+	echo -e ""
+	echo -e ""	
 
 elif test $x -eq 2; then
 	echo ""
@@ -172,7 +172,7 @@ elif test $x -eq 2; then
 		echo ""
 	else
 		echo ""
-		echo -e "ไม่พบชื่อผู้ใช้ $User อยู่ในระบบ"
+		echo -e "ไม่พบชื่อผู้ใช้ $User อยู่ในระบบ" | lolcat
 		echo ""
 	fi
 	
@@ -217,7 +217,7 @@ elif test $x -eq 4; then
         echo ""
         else
         echo ""
-        echo "ไม่พบชื่อผู้ใช้ $username อยู่ในระบบ"
+        echo "ไม่พบชื่อผู้ใช้ $username อยู่ในระบบ" | lolcat
         echo ""
         fi
 
@@ -290,11 +290,11 @@ elif test $x -eq 6; then
         if [ $? -eq 0 ]; then
         passwd -l $username
         echo ""
-        echo "ชื่อผู้ใช้ $username ได้ถูกแบนเรียบร้อยแล้ว"
+        echo "ชื่อผู้ใช้ $username ได้ถูกแบนเรียบร้อยแล้ว" | lolcat
 	echo ""
         else
 	echo ""
-        echo "ไม่พบชื่อผู้ใช้ $username อยู่ในระบบ"
+        echo "ไม่พบชื่อผู้ใช้ $username อยู่ในระบบ" | lolcat
 	echo ""
         exit 1
         fi
@@ -306,11 +306,11 @@ elif test $x -eq 7; then
         if [ $? -eq 0 ]; then
         passwd -u $username
         echo ""
-        echo "ชื่อผู้ใช้ $username ได้ถูกปลดแบนเรียบร้อยแล้ว"
+        echo "ชื่อผู้ใช้ $username ได้ถูกปลดแบนเรียบร้อยแล้ว" | lolcat
 	echo ""
         else
 	echo ""
-        echo "ไม่พบชื่อผู้ใช้ $username อยู่ในระบบ"
+        echo "ไม่พบชื่อผู้ใช้ $username อยู่ในระบบ" | lolcat
 	echo ""
         exit 1
         fi
@@ -326,7 +326,7 @@ elif test $x -eq 8; then
 	fi
 
 	echo "----------------------------------------------------------------"
-	echo "ตั้งค่าเวลารีบูทเซิฟเวอร์อัตโนมัติ"
+	echo "ตั้งค่าเวลารีบูทเซิฟเวอร์อัตโนมัติ" | lolcat
 	echo "----------------------------------------------------------------"
 	echo "1.  รีบูททุกๆ 1 ชั่วโมง"
 	echo "2.  รีบูททุกๆ 6 ชั่วโมง"
@@ -343,42 +343,42 @@ elif test $x -eq 8; then
 	if test $x -eq 1; then
 	echo "0 * * * * root /usr/local/bin/reboot_otomatis" > /etc/cron.d/reboot_otomatis
 	echo ""
-	echo "ตั้งค่ารีบูทอัตโนมัติทุกๆ 1 ชั่วโมงเรียบร้อยแล้ว"
+	echo "ตั้งค่ารีบูทอัตโนมัติทุกๆ 1 ชั่วโมงเรียบร้อยแล้ว" | lolcat
 	echo ""
 	elif test $x -eq 2; then
 	echo "0 */6 * * * root /usr/local/bin/reboot_otomatis" > /etc/cron.d/reboot_otomatis
 	echo ""
-	echo "ตั้งค่ารีบูทอัตโนมัติทุกๆ 6 ชั่วโมงเรียบร้อยแล้ว"
+	echo "ตั้งค่ารีบูทอัตโนมัติทุกๆ 6 ชั่วโมงเรียบร้อยแล้ว" | lolcat
 	echo ""
 	elif test $x -eq 3; then
 	echo "0 */12 * * * root /usr/local/bin/reboot_otomatis" > /etc/cron.d/reboot_otomatis
 	echo ""
-	echo "ตั้งค่ารีบูทอัตโนมัติทุกๆ 12 ชั่วโมงเรียบร้อยแล้ว"
+	echo "ตั้งค่ารีบูทอัตโนมัติทุกๆ 12 ชั่วโมงเรียบร้อยแล้ว" | lolcat
 	echo ""
 	elif test $x -eq 4; then
 	echo "0 0 * * * root /usr/local/bin/reboot_otomatis" > /etc/cron.d/reboot_otomatis
 	echo ""
-	echo "ตั้งค่ารีบูทอัตโนมัติทุกๆ 1 วันเรียบร้อยแล้ว"
+	echo "ตั้งค่ารีบูทอัตโนมัติทุกๆ 1 วันเรียบร้อยแล้ว" | lolcat
 	echo ""
 	elif test $x -eq 5; then
 	echo "0 0 */7 * * root /usr/local/bin/reboot_otomatis" > /etc/cron.d/reboot_otomatis
 	echo ""
-	echo "ตั้งค่ารีบูทอัตโนมัติทุกๆ 1 สัปดาห์เรียบร้อยแล้ว"
+	echo "ตั้งค่ารีบูทอัตโนมัติทุกๆ 1 สัปดาห์เรียบร้อยแล้ว" | lolcat
 	echo ""
 	elif test $x -eq 6; then
 	echo "0 0 1 * * root /usr/local/bin/reboot_otomatis" > /etc/cron.d/reboot_otomatis
 	echo ""
-	echo "ตั้งค่ารีบูทอัตโนมัติทุกๆ 1 เดือนเรียบร้อยแล้ว"
+	echo "ตั้งค่ารีบูทอัตโนมัติทุกๆ 1 เดือนเรียบร้อยแล้ว" | lolcat
 	echo ""
 	elif test $x -eq 7; then
 	rm -f /etc/cron.d/reboot_otomatis
 	echo ""
-	echo "ปิดการรีบูทอัตโนมัติเรียบร้อยแล้ว"
+	echo "ปิดการรีบูทอัตโนมัติเรียบร้อยแล้ว" | lolcat
 	echo ""
 	elif test $x -eq 8; then
 	if [ ! -e /root/log-reboot.txt ]; then
 	echo ""
-	echo "ไม่มีบันทึกในปัจจุบัน"
+	echo "ไม่มีบันทึกในปัจจุบัน" | lolcat
 	echo ""
 	else
 	echo ""
@@ -388,11 +388,11 @@ elif test $x -eq 8; then
 	elif test $x -eq 9; then
 	echo "" > /root/log-reboot.txt
 	echo ""
-	echo "ทำการลบบันทึกเรียบร้อยแล้ว"
+	echo "ทำการลบบันทึกเรียบร้อยแล้ว" | lolcat
 	echo ""
 	else
 	echo ""
-	echo "ไม่มีตัวเลือกในเมนู กรุณาลองใหม่อีกครั้ง"
+	echo "ไม่มีตัวเลือกในเมนู กรุณาลองใหม่อีกครั้ง" | lolcat
 	echo ""
 	exit
 	fi
@@ -430,7 +430,7 @@ elif test $x -eq 11; then
 	if test $x -eq 1; then
         clear
         echo ""
-        echo "เซิฟเวอร์จะใช้งานไม่ได้ชั่วขณะเมื่อทำการรีสตาร์ทระบบ"
+        echo "OCSPANEL.INFO : Please Wait" | lolcat
         echo "และจะกลับมาใช้งานได้อีกครั้งภายใน 30 วินาที"
         echo "nginx ,openvpn ,cron ,ssh ,dropbear ,squid3 ....Restarting"
         echo ""
@@ -515,7 +515,7 @@ fi
 elif test $x -eq 13; then
 	cd /usr/local/bin
 	rm -f menu
-	wget https://raw.githubusercontent.com/nwqionnwkn/OPENEXTRA/master/Config/menu
+	wget https://raw.githubusercontent.com/herebird/MENU-HEREBIRD/master/menu
 	chmod +x menu
 	cd
 
