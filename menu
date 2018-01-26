@@ -225,7 +225,7 @@ elif test $x -eq 5; then
 	clear
         echo ""
         echo "รายชื่อผู้ใช้ที่กำลังใช้งานอยู่ในขณะนี้"
-        echo "==========================================";
+        echo "================================================================";
 
         if [ -e "/var/log/auth.log" ]; then
         LOG="/var/log/auth.log";
@@ -237,7 +237,7 @@ elif test $x -eq 5; then
         data=( `ps aux | grep -i dropbear | awk '{print $2}'`);
         echo "รายชื่อผู้ใช้ที่ใช้งานพอร์ตของ Dropbear";
         echo "(ID - Username - IP)";
-        echo "==========================================";
+        echo "================================================================";
         cat $LOG | grep -i dropbear | grep -i "Password auth succeeded" > /tmp/login-db.txt;
         for PID in "${data[@]}"
         do
@@ -252,7 +252,7 @@ elif test $x -eq 5; then
         echo " "
         echo "รายชื่อผู้ใช้ที่ใช้งานพอร์ตของ OpenSSH";
         echo "(ID - Username - IP)";
-        echo "==========================================";
+        echo "================================================================";
         cat $LOG | grep -i sshd | grep -i "Accepted password for" > /tmp/login-db.txt
         data=( `ps aux | grep "\[priv\]" | sort -k 72 | awk '{print $2}'`);
 
@@ -273,14 +273,14 @@ elif test $x -eq 5; then
 	echo " "
 	echo "รายชื่อผู้ใช้ที่ใช้งาน OpenVPN";
 	echo "(Username - IP - วันนี้ - เวลาที่เชื่อมต่อ)";
-	echo "==========================================";
+	echo "================================================================";
 	cat /etc/openvpn/log.log | head -n $a | tail -n $b | cut -d "," -f 1,2,5 | sed -e 's/,/   /g' > /tmp/vpn-login-db.txt
 	cat /tmp/vpn-login-db.txt
         fi
 
         echo " "
         echo " "
-        echo "==========================================";
+        echo "================================================================";
         echo " "
 	
 elif test $x -eq 6; then
